@@ -1,45 +1,43 @@
-.App {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background: #282c34;
-  color: white;
-  font-family: Arial, sans-serif;
-}
+import React, { useState, useEffect } from 'react';
+import './App.css';
 
-#quote-box {
-  width: 90%;
-  max-width: 500px;
-  background: #333;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-}
+const quotes = [
+  { text: "Life is what happens when you're busy making other plans.", author: "John Lennon" },
+  { text: "The way to get started is to quit talking and begin doing.", author: "Walt Disney" },
+  { text: "You miss 100% of the shots you don’t take.", author: "Wayne Gretzky" },
+];
 
-#text {
-  font-size: 1.5rem;
-}
+export default function App() {
+  const [quote, setQuote] = useState({ text: '', author: '' });
 
-#author {
-  font-size: 1rem;
-  margin-top: 1rem;
-}
+  const getRandomQuote = () => {
+    const random = quotes[Math.floor(Math.random() * quotes.length)];
+    setQuote(random);
+  };
 
-.buttons {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-}
+  useEffect(() => {
+    getRandomQuote();
+  }, []);
 
-button,
-a {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  text-decoration: none;
-  color: white;
-  background: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  return (
+    <div className="App">
+      <div id="quote-box">
+        <p id="text">"{quote.text}"</p>
+        <p id="author">— {quote.author}</p>
+        <div className="buttons">
+          <a
+            id="tweet-quote"
+            href={`https://twitter.com/intent/tweet?text="${quote.text}" — ${quote.author}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tweet
+          </a>
+          <button id="new-quote" onClick={getRandomQuote}>
+            New Quote
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
