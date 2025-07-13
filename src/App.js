@@ -30,4 +30,16 @@ function App() {
           <button id="new-quote" onClick={getRandomQuote}>New Quote</button>
           <a
             id="tweet-quote"
-            href={`https://tw
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`"${quote.text}" - ${quote.author}`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tweet
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
