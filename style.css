@@ -11,7 +11,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* Transition for background color */
   transition: background-color 1s ease;
 }
 
@@ -29,7 +28,6 @@ body {
   font-size: 1.75em;
   font-weight: 500;
   margin-bottom: 20px;
-  /* Transition for text color */
   transition: color 1s ease;
 }
 
@@ -41,7 +39,6 @@ body {
   font-size: 1.1em;
   text-align: right;
   margin-bottom: 30px;
-  /* Transition for text color */
   transition: color 1s ease;
 }
 
@@ -59,7 +56,6 @@ body {
   font-size: 0.85em;
   cursor: pointer;
   outline: none;
-  /* Transition for background color */
   transition: background-color 1s ease;
 }
 
