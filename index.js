@@ -23,7 +23,6 @@ class QuoteMachine extends React.Component {
       .then(response => response.json())
       .then(data => {
         this.setState({ quotes: data.quotes }, () => {
-          // After fetching and storing quotes, get the first random quote
           this.getNewQuote();
         });
       })
@@ -48,7 +47,6 @@ class QuoteMachine extends React.Component {
   render() {
     const { currentQuote, currentAuthor, currentColor } = this.state;
     
-    // Dynamically update body background and element colors
     document.body.style.backgroundColor = currentColor;
 
     const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`"${currentQuote}" - ${currentAuthor}`)}`;
