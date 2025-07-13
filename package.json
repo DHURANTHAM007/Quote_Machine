@@ -1,8 +1,8 @@
 {
+  "homepage": "https://DHURANTHAM007.github.io/random-quote-machine",
   "name": "random-quote-machine",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://DHURANTHAM007.github.io/random-quote-machine",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
