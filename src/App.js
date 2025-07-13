@@ -1,45 +1,45 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
-
-const quotes = [
-  { text: "Be yourself; everyone else is already taken.", author: "Oscar Wilde" },
-  { text: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.", author: "Albert Einstein" },
-  { text: "So many books, so little time.", author: "Frank Zappa" },
-  { text: "A room without books is like a body without a soul.", author: "Marcus Tullius Cicero" },
-  { text: "In three words I can sum up everything I've learned about life: it goes on.", author: "Robert Frost" }
-];
-
-function App() {
-  const [quote, setQuote] = useState({ text: '', author: '' });
-
-  const getRandomQuote = () => {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    setQuote(quotes[randomIndex]);
-  };
-
-  useEffect(() => {
-    getRandomQuote();
-  }, []);
-
-  return (
-    <div className="App">
-      <div id="quote-box">
-        <p id="text">"{quote.text}"</p>
-        <p id="author">- {quote.author}</p>
-        <div className="buttons">
-          <button id="new-quote" onClick={getRandomQuote}>New Quote</button>
-          <a
-            id="tweet-quote"
-            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`"${quote.text}" - ${quote.author}`)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tweet
-          </a>
-        </div>
-      </div>
-    </div>
-  );
+.App {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #282c34;
+  color: white;
+  font-family: Arial, sans-serif;
 }
 
-export default App;
+#quote-box {
+  width: 90%;
+  max-width: 500px;
+  background: #333;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#text {
+  font-size: 1.5rem;
+}
+
+#author {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+button,
+a {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
