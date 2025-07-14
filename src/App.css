@@ -9,16 +9,26 @@
   flex-direction: column;
 }
 
+/* Wrapper for text and author to handle fade animation */
+#text-wrapper {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Class to apply when fading out */
+#text-wrapper.fade-out {
+  opacity: 0;
+}
+
 #text {
   font-size: 1.7em;
   font-weight: 500;
   margin-bottom: 25px;
   text-align: center;
-  min-height: 120px; /* Prevents layout jumps */
+  min-height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Animates the text color change */
   transition: color 1.2s ease;
 }
 
@@ -31,8 +41,7 @@
   font-size: 1em;
   text-align: right;
   margin-bottom: 30px;
-  min-height: 20px; /* Prevents layout jumps */
-  /* Animates the author color change */
+  min-height: 20px;
   transition: color 1.2s ease;
 }
 
@@ -45,13 +54,12 @@
 .button {
   border: none;
   border-radius: 3px;
-  color: white !important; /* Overrides default link color */
+  color: white !important;
   padding: 10px 15px;
   font-size: 0.9em;
   cursor: pointer;
   outline: none;
   text-decoration: none;
-  /* Animates the button background color change */
   transition: background-color 1.2s ease, opacity 0.3s ease;
 }
 
