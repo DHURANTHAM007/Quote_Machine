@@ -2,18 +2,18 @@
 
 body {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  /* Flexbox to center the quote box */
+  /* Flexbox to center the quote box on the page */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 
   /* This transition will animate the background color change */
-  transition: background-color 1s ease;
+  transition: background-color 1.2s ease;
 }
-
-/* We will control the background color from the App component */
