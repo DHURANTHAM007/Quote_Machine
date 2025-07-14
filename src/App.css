@@ -4,36 +4,36 @@
   padding: 40px 50px;
   width: 450px;
   max-width: 90%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
 }
 
 #text {
-  font-size: 1.75em;
+  font-size: 1.7em;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   text-align: center;
-  min-height: 120px; /* Prevents layout shift when quote length changes */
+  min-height: 120px; /* Prevents layout jumps */
   display: flex;
   align-items: center;
   justify-content: center;
   /* Animates the text color change */
-  transition: color 1s ease;
+  transition: color 1.2s ease;
 }
 
 #text .fa-quote-left {
-  margin-right: 10px;
-  font-size: 1em;
+  margin-right: 12px;
+  font-size: 1.1em;
 }
 
 #author {
   font-size: 1em;
   text-align: right;
   margin-bottom: 30px;
-  min-height: 20px; /* Prevents layout shift */
+  min-height: 20px; /* Prevents layout jumps */
   /* Animates the author color change */
-  transition: color 1s ease;
+  transition: color 1.2s ease;
 }
 
 .buttons {
@@ -46,18 +46,17 @@
   border: none;
   border-radius: 3px;
   color: white !important; /* Overrides default link color */
-  padding: 8px 12px;
+  padding: 10px 15px;
   font-size: 0.9em;
   cursor: pointer;
   outline: none;
   text-decoration: none;
   /* Animates the button background color change */
-  transition: background-color 1s ease;
+  transition: background-color 1.2s ease, opacity 0.3s ease;
 }
 
 #tweet-quote {
   font-size: 1.2em;
-  padding: 10px 15px;
 }
 
 #new-quote {
@@ -66,5 +65,5 @@
 }
 
 .button:hover {
-  opacity: 0.9;
+  opacity: 0.85;
 }
