@@ -17,14 +17,14 @@ const App = () => {
     '#77B1A9', '#73A857'
   ], []);
 
-  // useCallback memoizes the fetch function
+  // useCallback memoizes the fetch function to prevent re-creation
   const fetchQuotes = useCallback(async () => {
     try {
       const response = await fetch('https://type.fit/api/quotes');
       const data = await response.json();
       setAllQuotes(data);
       
-      // Set an initial random quote and color
+      // Set an initial random quote and color once data is loaded
       const randomQuoteIndex = Math.floor(Math.random() * data.length);
       const randomColorIndex = Math.floor(Math.random() * colors.length);
       setQuote(data[randomQuoteIndex].text);
