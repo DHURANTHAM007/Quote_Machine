@@ -1,0 +1,70 @@
+#quote-box {
+  background: white;
+  border-radius: 5px;
+  padding: 40px 50px;
+  width: 450px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+#text {
+  font-size: 1.75em;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+  min-height: 120px; /* Prevents layout shift when quote length changes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Animates the text color change */
+  transition: color 1s ease;
+}
+
+#text .fa-quote-left {
+  margin-right: 10px;
+  font-size: 1em;
+}
+
+#author {
+  font-size: 1em;
+  text-align: right;
+  margin-bottom: 30px;
+  min-height: 20px; /* Prevents layout shift */
+  /* Animates the author color change */
+  transition: color 1s ease;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  border: none;
+  border-radius: 3px;
+  color: white !important; /* Overrides default link color */
+  padding: 8px 12px;
+  font-size: 0.9em;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  /* Animates the button background color change */
+  transition: background-color 1s ease;
+}
+
+#tweet-quote {
+  font-size: 1.2em;
+  padding: 10px 15px;
+}
+
+#new-quote {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
